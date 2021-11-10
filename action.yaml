@@ -1,0 +1,17 @@
+# action.yaml
+name: 'check-sql-impact'
+author: 'Alvin'
+description: 'Alvin - Check SQL Impact.'
+branding:
+  icon: 'crosshair'
+  color: 'blue'
+inputs:
+  args:
+    description: 'sql files args'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'docker://alvindotai/alvil-cli:latest'
+  args:
+    - ${{inputs.args}}
