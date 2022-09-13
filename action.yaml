@@ -13,6 +13,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://alvindotai/alvin-cli:latest'
-  build-args: 
+  args:
     - ${{inputs.args}}
-    - '--platform linux/amd64'
